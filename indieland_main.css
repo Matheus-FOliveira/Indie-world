@@ -1,0 +1,87 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #025249;
+    font-family: Popins;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.card_inicial{
+    display: flex;
+}
+.card_cadastro{
+    display: none;
+}
+.card{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: solid rgba(0, 0, 0, 0.5) 3px;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 80vh;
+    width: 50%;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.input_login{
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+    border: blue solid 2px;
+    border-radius: 10px;
+    
+}
+
+.organizar_botoes{
+    flex-direction: column;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+}
+
+.botoes_de_baixo{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    border-radius: 15px;
+    width: 200px;
+    border: groove 2px #fff;
+}
+.botao_login:hover{
+    background-color: blue;
+    letter-spacing: 3px;
+    box-shadow: 0 0 35px blue;
+} 
+.botao_cadastrar:hover{
+    background-color: orangered;
+    letter-spacing: 3px;
+    box-shadow: 0 0 35px orangered;
+} 
+.botao_visitante:hover{
+    background-color: greenyellow;
+    letter-spacing: 3px;
+    box-shadow: 0 0 35px greenyellow;
+} 

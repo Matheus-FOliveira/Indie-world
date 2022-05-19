@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@100&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indie_world.css">
+    <link rel="stylesheet" href="indieland_main.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,16 +15,24 @@
 </body>
 </html>
     <div class="container">
-        <div class="card">
+        <div class="card card_inicial">
+            <div class="titulo_inicial">Bem-vindo à <span id="indieland">INDIELAND!</span></div>
+            <br>
             <label for="username">Usuário</label>
             <input type="text" placeholder="Usuário" id="username" class="input_login">
             <label for="password">Senha</label>
             <input type="password" placeholder="Senha" id="password" class="input_login">
             <div class="organizar_botoes">
-                <button id="botao_cadastro" class="botao_inicial">Cadastrar</button>
-                <button id="botao_login" class="botao_inicial">Login</button>
-                <button id="botao_visitante" class="botao_inicial">Visitar</button>
+                <a href="#"class="botao botao_login" onclick="fazer_login()"><span> Login</span></a>
+                <div class="botoes_de_baixo">
+                    <a href="#" class="botao botao_cadastrar" onclick="chamar_cadastro()"><span>Cadastrar</span></a>
+                    <a href="#" class="botao botao_visitante" onclick="chamar_visitante()"><span>Visitante</span></a>
+                </div>
             </div>
+            
+        </div>
+        <div class="card card_cadastro">
+
         </div>
     </div>
-<script src=""></script>
+<script src="indieland_main.js"></script>
