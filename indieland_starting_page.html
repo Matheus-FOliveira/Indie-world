@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/indieland_main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<div class="container">
+    <div class="card card_inicial" id="card_inicial">
+        <div class="titulo_inicial">Bem-vindo à <span id="indieland_css">INDIELAND!</span></div>
+        <br>
+        <label for="username">Usuário</label>
+        <input type="text" placeholder="Usuário" id="username" class="input_login">
+        <label for="password">Senha</label>
+        <input type="password" placeholder="Senha" id="password" class="input_login">
+        <div class="organizar_botoes">
+            <a class="botao botao_login" onclick="fazer_login()"><span> Login</span></a>
+            <div class="botoes_de_baixo">
+                <a class="botao botao_cadastrar" onclick="chamar_cadastro()"><span>Cadastrar</span></a>
+                <a class="botao botao_visitante" onclick="entrar_visitante()"><span>Visitante</span></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="card card_cadastro" id="card_cadastro">
+        <div id="botao_voltar_login" onclick="chamar_login()">Voltar</div>
+        <!-- Adicionar função de checagem por onblur, coisas como 'e-mail deve ter @' e 'senhas não são iguais' -->
+        <div class="coluna1">
+            <label for="input_nome" class="label_cadastro">Nome:</label>
+            <br>
+            <input type="text" placeholder="Nome" id="input_nome" class="input_login">
+            <br>
+            <label for="input_username" class="label_cadastro">Nome de usuário:</label>
+            <br>
+            <input type="text" placeholder="Nome de usuário" id="input_username" class="input_login">
+            <br>
+            <label for="input_password">Senha:</label>
+            <br>
+            <input type="password" placeholder="Senha" id="input_password" class="input_login">
+            <br>
+        </div>
+        <div class="coluna2">
+            <label for="confirm_password">Confirmar senha:</label>
+            <br>
+            <input type="password" placeholder="Senha" id="confirm_password" class="input_login">
+            <br>
+            <label for="input_e-mail" class="label_cadastro">E-mail:</label>
+            <br>
+            <input type="text" placeholder="E-mail" id="input_email" class="input_login">
+            <br>
+
+            <div class="ocupar_espaço"></div>
+
+        </div>
+    </div>
+</div>
+<script src="../JS/indieland_main.js"></script>

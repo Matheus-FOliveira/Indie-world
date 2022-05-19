@@ -8,6 +8,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    color: #fff;
 }
 .card_inicial{
     display: flex;
@@ -23,19 +24,36 @@ body{
     border: solid rgba(0, 0, 0, 0.5) 3px;
     background-color: rgba(0, 0, 0, 0.25);
     height: 80vh;
-    width: 50%;
+    width: 800px;
     flex-direction: column;
     font-size: 30px;
 }
-
+.card.card_cadastro{
+    align-items: center;
+    justify-content: space-around;
+    border: pink 5px solid;
+    flex-direction: row;
+}
+.ocupar_espaço{
+    height: 70px;
+}
+.label_cadastro{
+    margin-top: 10px;
+}
+#botao_voltar_login {
+    cursor: pointer;
+    align-self: flex-start;
+    position: fixed;
+    padding: 20px;
+}
 .input_login{
     width: 250px;
     height: 30px;
     font-size: 25px;
     border: blue solid 2px;
     border-radius: 10px;
-    
 }
+
 
 .organizar_botoes{
     flex-direction: column;
@@ -69,6 +87,7 @@ body{
     border-radius: 15px;
     width: 200px;
     border: groove 2px #fff;
+    cursor: pointer;
 }
 .botao_login:hover{
     background-color: blue;
@@ -85,3 +104,6 @@ body{
     letter-spacing: 3px;
     box-shadow: 0 0 35px greenyellow;
 } 
+
+
+
