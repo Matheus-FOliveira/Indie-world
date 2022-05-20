@@ -116,12 +116,69 @@ body{
     height: 10px;
     border-radius: 50px;
 }
+.botao_realizar_cadastro{
+    position: fixed;
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+.botao_realizar_cadastro:hover{
+    background-color: red;
+    letter-spacing: 3px;
+    box-shadow: 0 0 60px red;
+}
 
 .botao_especifico:hover{
     background-color: blueviolet;
     font-size: 30px;
     letter-spacing: 3px;
     box-shadow: 0 0 25px blueviolet;
+}
+.mensagem_erro{
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    border: 0.5px solid orange;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.5s;
+    opacity: 0;   
+    cursor: default;
+}
+
+#input_nome:hover~#mensagem_erro_nome{
+    opacity: 1;
+}
+#mensagem_erro_nome{
+    top:200px;
+}
+
+#input_username:hover~#mensagem_erro_username{
+    opacity: 1;
+}
+#mensagem_erro_username{
+    top:270px;
+}
+#input_password:hover~#mensagem_erro_password{
+    opacity: 1;
+}
+#mensagem_erro_password{
+    top: 340px;
+}
+#confirm_password:hover~#mensagem_erro_password_confirm{
+    opacity: 1;
+}
+
+#mensagem_erro_password_confirm{
+    top: 200px
+}
+
+#input_email:hover~#mensagem_erro_email{
+    opacity: 1;
+}
+
+#mensagem_erro_email{
+    top:270px;
 }
 
 

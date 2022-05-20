@@ -40,30 +40,35 @@
         <div class="coluna1">
             <label for="input_nome" class="label_cadastro">Nome:</label>
             <br>
-            <input type="text" placeholder="Nome" id="input_nome" class="input_login">
+            <input type="text" placeholder="Nome" id="input_nome" class="input_login" onblur="checagem_nome()">
+            <div id="mensagem_erro_nome" class="mensagem_erro">O nome deve ter pelo menos 3 letras!</div>
             <br>
             <label for="input_username" class="label_cadastro">Nome de usuário:</label>
             <br>
-            <input type="text" placeholder="Nome de usuário" id="input_username" class="input_login">
+            <input type="text" placeholder="Nome de usuário" id="input_username" class="input_login" onblur="checagem_usuario()">
+            <div id="mensagem_erro_username" class="mensagem_erro">O usuário deve ter pelo menos 5 letras!</div>
             <br>
             <label for="input_password">Senha:</label>
             <br>
-            <input type="password" placeholder="Senha" id="input_password" class="input_login">
+            <input type="password" placeholder="Senha" id="input_password" class="input_login" onblur="checagem_senha()">
+            <div id="mensagem_erro_password" class="mensagem_erro">A senha deve ter 6 caracteres e 1 carater especial!</div>
             <br>
         </div>
         <div class="coluna2">
             <label for="confirm_password">Confirmar senha:</label>
             <br>
-            <input type="password" placeholder="Senha" id="confirm_password" class="input_login">
+            <input type="password" placeholder="Senha" id="confirm_password" class="input_login" onblur="checagem_senha_confirmada()">
+            <div id="mensagem_erro_password_confirm" class="mensagem_erro">As senhas devem ser iguais!</div>
             <br>
             <label for="input_e-mail" class="label_cadastro">E-mail:</label>
             <br>
-            <input type="text" placeholder="E-mail" id="input_email" class="input_login">
+            <input type="text" placeholder="E-mail" id="input_email" class="input_login" onblur="checagem_email()">
+            <div id="mensagem_erro_email" class="mensagem_erro">Insira um enedereço de e-mail válido!</div>
             <br>
-
             <div class="ocupar_espaço"></div>
-
         </div>
+        <a class="botao botao_realizar_cadastro" onclick="realizar_cadastro()">Cadastrar!</a>
     </div>
 </div>
 <script src="JS/indieland_main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
