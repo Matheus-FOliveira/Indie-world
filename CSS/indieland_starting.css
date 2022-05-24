@@ -2,7 +2,7 @@ body{
     background-image: url('../Images/Celeste_img.png');
     padding: 0;
     margin: 0;
-    font-family: Popins;
+    font-family: Poppins;
     background-size: 100vw 100vh;
     background-clip:border-box;
     background-repeat: no-repeat;
@@ -134,7 +134,7 @@ body{
 .botao_realizar_cadastro{
     position: fixed;
     align-self: flex-end;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 .botao_realizar_cadastro:hover{
     background-color: red;

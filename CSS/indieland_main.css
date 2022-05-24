@@ -1,13 +1,33 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: Poppins;
 }
 
 #header{
     background-color: blueviolet;
+    border-bottom: purple 5px ridge;
+    font-weight: bold;
     display: flex;
     justify-content: space-around;
-    height: 30px;
+    position: fixed;
+    height: 60px;
     width: 100%;
     align-items: center;
+    font-size: 25px;
+}
+
+.lista_header{
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    flex-direction: row;
+}
+
+#botao_sair{
+    font-size: 20px;
 }

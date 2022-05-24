@@ -6,15 +6,15 @@ var email_ok = false
 var tudo_ok = false
 
 const images=[
-    'Images/Binding_of_Isaac_img.jpg',
-    'Images/Celeste_img.png',
-    'Images/Cuphead_img2.jpg',
-    'Images/Darkest_Dungeon_img.jpg',
-    'Images/Hades_img.png',
-    'Images/Hollow_Knight_img.jpg',
-    'Images/Limbo_img.jpg',
-    'Images/ori_img.jpg',
-    'Images/Undertale_img.png'
+    '../Images/Binding_of_Isaac_img.jpg',
+    '../Images/Celeste_img.png',
+    '../Images/Cuphead_img2.jpg',
+    '../Images/Darkest_Dungeon_img.jpg',
+    '../Images/Hades_img.png',
+    '../Images/Hollow_Knight_img.jpg',
+    '../Images/Limbo_img.jpg',
+    '../Images/ori_img.jpg',
+    '../Images/Undertale_img.png'
 ]
 
 function trocarFundo(){
