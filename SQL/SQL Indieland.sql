@@ -43,4 +43,5 @@ Primary key(id)
  (null, 'Cuphead', 'Run and Gun'),
  (null, 'Minecraft', 'Simulador'),
  (null, 'Slay the Spire', 'Roguelike'),
- (null, 'Shovel Knight', 'Plataforma');
+ (null, 'Shovel Knight', 'Plataforma'),
+ (null, 'Deaths Door', 'Aventura');

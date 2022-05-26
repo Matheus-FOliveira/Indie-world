@@ -31,7 +31,6 @@ body{
 }
 .card{
     margin-top: 50px;
-    justify-content: center;
     align-items: center;
     border-radius: 6px;
     border: solid rgba(0, 0, 0, 0.9) 3px;
@@ -52,6 +51,11 @@ body{
     justify-content: space-around;
     flex-direction: row;
     transition: 1s;
+}
+
+.img_titulo{
+    height: 50px;
+    text-shadow: 0 0 20px pink;
 }
 .ocupar_espaço{
     height: 70px;
