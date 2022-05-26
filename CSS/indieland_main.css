@@ -11,23 +11,72 @@ body{
     display: flex;
     justify-content: space-around;
     position: fixed;
-    height: 60px;
+    height: 80px;
     width: 100%;
     align-items: center;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .lista_header{
-    font-size: 15px;
+    font-size: 23px;
     color: white;
-    cursor: pointer;
-    gap: 20px;
     display: flex;
     justify-content: space-around;
     width: 500px;
     flex-direction: row;
+    margin-left: 1000px;
 }
 
 #botao_sair{
-    font-size: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.clickable{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.carrossel{
+    height: 700px;
+    background-color: blue;
+}
+.barra_preta{
+    height: 700px;
+    width: 20%;
+    background-color: black;
+}
+.barra_preta1{
+    float: left;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,0.8) 78%, rgba(255,255,255,0) 100%);
+}
+.barra_preta2{
+    float: right;
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,0.8) 78%, rgba(255,255,255,0) 100%);
+}
+.frase_carrossel{
+    font-family: Roboto Mono;
+    position: absolute;
+    top: 300px;
+    color: white;
+    font-size: 4.5em;
+    width: 500px;
+    -webkit-text-stroke-width: 3px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    margin-left: 10%;
+}
+
+
+footer{
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    background-color: blueviolet;
 }
