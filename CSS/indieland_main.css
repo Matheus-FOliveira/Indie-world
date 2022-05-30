@@ -25,7 +25,7 @@ body{
 }
 
 .lista_header{
-    font-size: 15px;
+    font-size: 18px;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -47,6 +47,7 @@ body{
 .carrossel{
     height: 700px;
     overflow: hidden;
+    border-bottom: #000 solid 20px;
 }
 .barra_preta{
     height: 700px;
@@ -96,7 +97,7 @@ body{
 #carrossel_img backgroundImage{
     height: 100%;
     width: 100%;
-}
+    }
 
 
 footer{
@@ -110,4 +111,56 @@ footer{
     left: 0;
     height: 150px;
     background-color: blueviolet;
+}
+
+.div_sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    font-family: Quicksand;
+    color: black;
+    height: 500px;
+    font-size: 35px;
+    background: rgb(144,255,0);
+    background: radial-gradient(circle, rgba(144,255,0,1) 0%, rgba(134,250,222,1) 95%);
+    border: rgb(255, 255, 255) 12px solid;
+    border-radius: 50px;
+}
+.titulo_sobre{
+    font-size: 50px;
+    text-rendering: geometricPrecision;
+}
+.texto_sobre{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.div_jogos{
+    height: 600px;
+    display: flex;
+    padding: 40px;
+    background-color: #000;
+}
+
+.lista_jogos{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: white 2px solid;
+    overflow-y: scroll;
+}
+
+#sobre_jogos{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    font-family: Tiro Kannada;
+    font-size: 25px;
+    background-color: cornflowerblue;
+    width: 65%;
+    padding: 20px;
+    border: 9px solid rgb(0, 0, 141);
 }
