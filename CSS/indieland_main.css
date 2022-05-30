@@ -142,7 +142,8 @@ footer{
     height: 600px;
     display: flex;
     padding: 40px;
-    background-color: #000;
+    background: rgb(0,0,83);
+    background: linear-gradient(30deg, rgba(0,0,83,1) 0%, rgba(0,0,0,1) 75%);
 }
 
 .lista_jogos{
@@ -151,16 +152,98 @@ footer{
     width: 20%;
     border: white 2px solid;
     overflow-y: scroll;
+    background-color: rgba(0,0,100,1);
 }
 
 #sobre_jogos{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-left: 10%;
     font-family: Tiro Kannada;
     font-size: 25px;
-    background-color: cornflowerblue;
+    background-color: rgb(90, 171, 173);
     width: 65%;
-    padding: 20px;
+    padding: 10%;
     border: 9px solid rgb(0, 0, 141);
+    border-radius: 5px;
+    overflow:  hidden;
+}
+
+.lista_jogos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.clickable_img{
+    height: 25%;
+    cursor: pointer;
+}
+
+.titulo_sobre{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.genero_sobre{
+    text-decoration: underline;
+}
+.screenshots img{
+    width: 30%;
+    height: 150px;
+    border: solid black 1px;
+    border-radius: 3px;
+}
+
+#sobre_padrao{
+    font-size: 50px;
+}
+
+#sobre_boi{
+    display: none;
+}
+#sobre_celeste{
+    display: none;
+}
+#sobre_cuphead{
+    display: none;
+}
+#sobre_dd{
+    display: none;
+}
+
+#sobre_hades{
+    display: none;
+}
+
+#sobre_hk{
+    display: none;
+}
+
+#sobre_inside{
+    display: none;
+}
+
+#sobre_limbo{
+    display: none;
+}
+
+#sobre_oribf{
+    display: none;
+}
+
+#sobre_oriww{
+    display: none;
+}
+
+#sobre_skullgirls{
+    display: none;
+}
+
+#sobre_sv{
+    display: none;
+}
+
+#sobre_undertale{
+    display: none;
 }
