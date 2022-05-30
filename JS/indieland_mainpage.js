@@ -23,6 +23,12 @@ const imgs_carrossel = [
 setTimeout(trocar_carrossel, 0)
 setInterval(trocar_carrossel, 4500)
 
+function scroll_inicio(){
+    scroll(0,0);
+}
+function scroll_jogos(){
+    scroll(0,1300)
+}
 function exibir_sobre_boi(){
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'inline'

@@ -22,16 +22,16 @@
         <span id="titulo"><img src="../Images/Img_titulo_indieland.png" alt="Indieland" class="img_titulo"></span>
         <div class="lista_header">
             <ul>
-                <span class="clickable" id="botao_inicio">Início</span>
-                <span class="clickable" id="botao_jogos">Jogos</span>
-                <span class="clickable" id="botao_enquete">Enquete</span>
-                <span class="clickable" id="botao_comentarios">Comentários</span>
+                <a class="clickable" id="botao_inicio" href="#inicio">Início</a>
+                <a class="clickable" id="botao_jogos" href="#jogos">Jogos</a>
+                <a class="clickable" id="botao_enquete" href="#enquete">Enquete</a>
+                <a class="clickable" id="botao_comentarios" href="#comentarios">Comentários</a>
             </ul>
         </div>
         <span id="botao_sair">Sair</span>
     </div>
 
-    <div class="carrossel">
+    <div class="carrossel" id="inicio">
         <div class="barra_preta barra_preta1"></div>
         <canvas id="carrossel_img"></canvas>
         <div class="frase_carrossel">Descubra seu novo jogo favorito!</div>
@@ -47,7 +47,7 @@
             A paixão e o fator de serem tão únicos foi o que me inspirou a fazer todo esse tema
         </div>
     </div>
-    <div class="div_jogos">
+    <div class="div_jogos" id="jogos">
         <div class="lista_jogos">
             <img src="../Images/Icons/boi-icon.png" alt="Binding of Isaac icon" class="clickable_img"
                 onclick="exibir_sobre_boi()">
@@ -305,12 +305,12 @@
 
     <!-- As divs abaixo devem ser personalizadas para ficar de forma ideal no site -->
 
-    <div class="div_enquete">
+    <div class="div_enquete" id="enquete">
         <div id="votar_jogo"></div>
         <div id="myChartJs"></div>
     </div>
 
-    <div class="div_comentarios">
+    <div class="div_comentarios" id="comentarios">
         <div class="adicionar_comentario">
             <div class="adicionar_comentario_titulo">
                 <label for="input_titulo">Título:</label>
