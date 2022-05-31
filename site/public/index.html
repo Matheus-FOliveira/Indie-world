@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/indieland_starting.css">
+    <title>Indieland | Bem-vindo</title>
+</head>
+
+<body id="body">
+
+</html>
+<div class="em_volta">
+    <div class="container">
+        <div class="card card_inicial" id="card_inicial">
+            <div class="titulo_inicial">
+                Bem-vindo à <br><img src="Images/Img_titulo_indieland.png" alt="Indieland" class="img_titulo">
+            </div>
+            <br>
+            <label for="username">E-mail</label>
+            <input type="text" placeholder="E-M@IL" id="login_email" class="input_login">
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Senha" id="login_password" class="input_login">
+            <div class="organizar_botoes">
+                <a class="botao botao_login" onclick="fazer_login()"><span> Login</span></a>
+                <div class="botoes_de_baixo">
+                    <a class="botao botao_cadastrar" onclick="chamar_cadastro()"><span>Cadastrar</span></a>
+                    <a class="botao botao_visitante" onclick="entrar_visitante()"><span>Visitante</span></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card card_cadastro" id="card_cadastro">
+            <div id="botao_voltar_login" class="botao botao_especifico" onclick="chamar_login()"> &larr;
+            </div>
+            <div class="coluna1">
+                <label for="input_nome" class="label_cadastro">Nome:</label>
+                <br>
+                <input type="text" placeholder="Nome" id="input_nome" class="input_login" onblur="checagem_nome()">
+                <div id="mensagem_erro_nome" class="mensagem_erro">O nome deve ter pelo menos 3 letras!</div>
+                <br>
+                <label for="input_username" class="label_cadastro">Nome de usuário:</label>
+                <br>
+                <input type="text" placeholder="Nome de usuário" id="input_username" class="input_login"
+                    onblur="checagem_usuario()">
+                <div id="mensagem_erro_username" class="mensagem_erro">O usuário deve ter pelo menos 5 letras!
+                </div>
+                <br>
+                <label for="input_password">Senha:</label>
+                <br>
+                <input type="password" placeholder="Senha" id="input_password" class="input_login"
+                    onblur="checagem_senha()">
+                <div id="mensagem_erro_password" class="mensagem_erro">A senha deve ter 6 caracteres e 1 carater
+                    especial!</div>
+                <br>
+            </div>
+            <div class="coluna2">
+                <label for="confirm_password">Confirmar senha:</label>
+                <br>
+                <input type="password" placeholder="Senha" id="confirm_password" class="input_login"
+                    onblur="checagem_senha_confirmada()">
+                <div id="mensagem_erro_password_confirm" class="mensagem_erro">As senhas devem ser iguais!</div>
+                <br>
+                <label for="input_e-mail" class="label_cadastro">E-mail:</label>
+                <br>
+                <input type="text" placeholder="E-mail" id="input_email" class="input_login" onblur="checagem_email()">
+                <div id="mensagem_erro_email" class="mensagem_erro">Insira um enedereço de e-mail válido!</div>
+                <br>
+                <div class="ocupar_espaço"></div>
+            </div>
+            <a class="botao botao_realizar_cadastro" onclick="realizar_cadastro()">Cadastrar!</a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="JS/indieland_main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    
+</script>
