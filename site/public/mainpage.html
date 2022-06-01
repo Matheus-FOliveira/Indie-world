@@ -20,17 +20,17 @@
 <body>
     <div id="header">
         <span id="titulo"><img src="Images/Img_titulo_indieland.png" alt="Indieland" class="img_titulo"></span>
-        <span class="hello_header">Olá, Usuário!</span>
+        <span class="hello_header">Olá, <span onload="buscar_nome()" id="nome_usuario">Usuário</span></span>
         <div class="lista_header">
             <ul>
-                <a class="clickable" id="botao_inicio" href="#inicio">Início</a>
-                <a class="clickable" id="botao_jogos" href="#jogos">Jogos</a>
-                <a class="clickable" id="botao_enquete" href="#enquete">Enquete</a>
-                <a class="clickable" id="botao_comentarios" href="#comentarios">Comentários</a>
+                <a class="clickable" id="botao_inicio" onclick="scroll_inicio()">Início</a>
+                <a class="clickable" id="botao_jogos" onclick="scroll_jogos()">Jogos</a>
+                <a class="clickable" id="botao_enquete" onclick="scroll_enquete()">Enquete</a>
+                <a class="clickable" id="botao_comentarios" onclick="scroll_comentarios()">Comentários</a>
                 <span id="botao_sair">Sair</span>
             </ul>
         </div>
-        
+
     </div>
 
     <div class="carrossel" id="inicio">
@@ -333,29 +333,45 @@
             <label for="radio_celeste">Celeste</label><br>
             <input type="radio" id="radio_cuphead" name="jogo_fav" value="cuphead">
             <label for="radio_cuphead">Cuphead</label><br>
-            <input type="radio" id="" name="jogo_fav" value="">
-            <label for=""></label><br>
-            <input type="radio" id="" name="jogo_fav" value="">
-            <label for=""></label><br>
-            <input type="radio" id="" name="jogo_fav" value="">
-            <label for=""></label><br>
-            <input type="radio" id="" name="jogo_fav" value="">
-            <label for=""></label><br>
-            <input type="radio" id="" name="jogo_fav" value="">
-            <label for=""></label><br>
+            <input type="radio" id="radio_dd" name="jogo_fav" value="dd">
+            <label for="radio_dd">Darkest Dungeon</label><br>
+            <input type="radio" id="radio_hades" name="jogo_fav" value="hades">
+            <label for="radio_hades">Hades</label><br>
+            <input type="radio" id="radio_hk" name="jogo_fav" value="hk">
+            <label for="radio_hk">Hollow Knight</label><br>
+            <input type="radio" id="radio_inside" name="jogo_fav" value="inside">
+            <label for="radio_inside">Inside</label><br>
+            <input type="radio" id="radio_limbo" name="jogo_fav" value="limbo">
+            <label for="radio_limbo">Limbo</label><br>
+            <input type="radio" id="radio_oribf" name="jogo_fav" value="oribf">
+            <label for="radio_oribf">Ori and the Blind Forest</label><br>
+            <input type="radio" id="radio_oriww" name="jogo_fav" value="oriww">
+            <label for="radio_oriww">Ori and the Will of the Wisps</label><br>
+            <input type="radio" id="radio_skullgirls" name="jogo_fav" value="skullgirls">
+            <label for="radio_skullgirls">Skullgirls</label><br>
+            <input type="radio" id="radio_sv" name="jogo_fav" value="sv">
+            <label for="radio_sv">Stardew Valley</label><br>
+            <input type="radio" id="radio_undertale" name="jogo_fav" value="undertale">
+            <label for="radio_undertale">Undertale</label><br>
+            <br>
+            <br>
+            <button class="botao_voto" onclick="registrar_voto()">VOTAR</button>
         </div>
-        <canvas id="myChartJs"></div>
+        <div class="grafico_votos">
+            <canvas id="myChartJs">
+        </div>
+    </div>
     </div>
 
     <div class="div_comentarios" id="comentarios">
         <div class="adicionar_comentario">
             <div class="adicionar_comentario_titulo">
-                <label for="input_titulo">Título:</label>
+                <label for="input_titulo">Título:</label><br>
                 <input type="text" id="input_titulo" placeholder="Título (máximo 50 caracteres)">
             </div>
             <div class="adicionar_comentario_corpo">
-                <label for="input_corpo">Comentário:</label>
-                <input type="text" id="input_corpo" placeholder="Digite aqui seu comentário (Máximo 200 caracteres)">
+                <label for="input_corpo">Comentário:</label><br>
+                <textarea rows="3" id="input_corpo" placeholder="Digite aqui seu comentário (Máximo 200 caracteres)"></textarea>
             </div>
         </div>
         <div id="exibir_comentarios">

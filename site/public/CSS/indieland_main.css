@@ -269,7 +269,84 @@ footer{
 }
 
 #votar_jogo{
+    width: 20%;
     gap: 20px;
     font-family: Quicksand;
-    background-color: aquamarine;
+    background-color: rgb(0, 255, 170);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px rgb(0, 0, 179) solid;
+    border-radius: 20px;
+}
+
+.botao_voto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 120px;
+    height: 30px;
+    transition: 0.5s;
+    background-color: rgb(255, 180, 41);
+}
+
+.botao_voto:hover{
+    font-size: 25px;
+    background-color: rgb(255, 136, 0);
+}   
+
+.grafico_votos{
+    height: 460px;
+    background-color: white;
+    width: 60%;
+    margin-left: 10%;
+    justify-self: end;
+    align-self: center;
+}
+
+.div_comentarios{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+    background: rgb(3,0,56);
+    background: linear-gradient(90deg, rgba(3,0,56,1) 0%, rgba(40,127,255,1) 100%);
+}
+
+
+.adicionar_comentario{
+    font-family: Lato;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkmagenta;
+    height: 80%;
+    float: left;
+    width: 300px;
+}
+
+#input_titulo{
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+}
+
+#input_corpo{
+    display: flex;
+    text-align: start;
+    word-wrap:break-word;
+    text-justify: inter-word;
+    width: 250px;
+    height: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+}
+
+#exibir_comentarios{
+    background-color: antiquewhite;
+    height: 85%;
+    width: 60%;
+    border: solid rgb(0, 0, 194) 4px;
+    box-shadow: 3px 3px 5px black ;
 }

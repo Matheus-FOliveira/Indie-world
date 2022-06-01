@@ -20,6 +20,10 @@ const imgs_carrossel = [
     carrossel_img.style.transform = `transleteX(${-i * 80}vw)`
 }
 
+function buscar_nome(){
+    nome_usuario.innerHTML = sessionStorage.nome
+}
+
 setTimeout(trocar_carrossel, 0)
 setInterval(trocar_carrossel, 4500)
 
@@ -28,6 +32,12 @@ function scroll_inicio(){
 }
 function scroll_jogos(){
     scroll(0,1300)
+}
+function scroll_enquete(){
+    scroll(0,1950)
+}
+function scroll_comentarios(){
+    scroll(0,2500)
 }
 function exibir_sobre_boi(){
     sobre_padrao.style.display = 'none'
@@ -236,4 +246,8 @@ function exibir_sobre_undertale(){
     sobre_skullgirls.style.display = 'none'
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'inline'
+}
+
+function registrar_voto(){
+    alert('Seu voto foi registrado! Fique a vontade pra trocar!')
 }
