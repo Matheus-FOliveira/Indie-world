@@ -12,6 +12,7 @@ Primary key(id)
  id int auto_increment,
  nome varchar(100),
  username varchar(50),
+ username varchar(50),
  senha varchar(100),
  fk_jogos int,
  primary key (id),
