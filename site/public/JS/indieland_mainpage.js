@@ -43,6 +43,11 @@ function sair(){
     sessionStorage.clear()
     window.location = "index.html"
 }
+function greetings(){
+    if(sessionStorage.nome.length > 0){
+        nome_usuario.innerHTML = sessionStorage.nome
+    }
+}
 function exibir_sobre_boi() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'inline'
