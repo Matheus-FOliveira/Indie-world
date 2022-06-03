@@ -24,4 +24,8 @@ router.post("/:usuario_id/votar/:jogos_id", function(req, res){
     usuarioController.votar(req, res);
 })
 
+router.get("/pegarVoto", function (req, res) {
+    usuarioController.pegarVoto(req, res);
+});
+
 module.exports = router;

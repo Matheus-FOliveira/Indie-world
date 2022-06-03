@@ -14,6 +14,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/indieland_main.css">
+    <script src="JS/indieland_mainpage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Indieland</title>
 </head>
 
@@ -27,7 +29,7 @@
                 <a class="clickable" id="botao_jogos" onclick="scroll_jogos()">Jogos</a>
                 <a class="clickable" id="botao_enquete" onclick="scroll_enquete()">Enquete</a>
                 <a class="clickable" id="botao_comentarios" onclick="scroll_comentarios()">Comentários</a>
-                <span id="botao_sair">Sair</span>
+                <span id="botao_sair" onclick="sair()">Sair</span>
             </ul>
         </div>
 
@@ -329,31 +331,31 @@
         <div id="titulo_enquete">Jogos Populares</div>
         <div id="votar_jogo">Vote em seu jogo favorito:<br><br>
             <form id="jogo_favorito">
-            <input type="radio" id="radio_boi" name="jogo_fav" value="4">
+            <input type="radio" id="radio_boi" name="jogo_fav" value="1">
             <label for="radio_boi">Binding of Isaac</label><br>
-            <input type="radio" id="radio_celeste" name="jogo_fav" value="3">
+            <input type="radio" id="radio_celeste" name="jogo_fav" value="2">
             <label for="radio_celeste">Celeste</label><br>
-            <input type="radio" id="radio_cuphead" name="jogo_fav" value="12">
+            <input type="radio" id="radio_cuphead" name="jogo_fav" value="3">
             <label for="radio_cuphead">Cuphead</label><br>
-            <input type="radio" id="radio_dd" name="jogo_fav" value="5">
+            <input type="radio" id="radio_dd" name="jogo_fav" value="4">
             <label for="radio_dd">Darkest Dungeon</label><br>
-            <input type="radio" id="radio_hades" name="jogo_fav" value="11">
+            <input type="radio" id="radio_hades" name="jogo_fav" value="5">
             <label for="radio_hades">Hades</label><br>
-            <input type="radio" id="radio_hk" name="jogo_fav" value="1">
+            <input type="radio" id="radio_hk" name="jogo_fav" value="6">
             <label for="radio_hk">Hollow Knight</label><br>
-            <input type="radio" id="radio_inside" name="jogo_fav" value="10">
+            <input type="radio" id="radio_inside" name="jogo_fav" value="7">
             <label for="radio_inside">Inside</label><br>
-            <input type="radio" id="radio_limbo" name="jogo_fav" value="9">
+            <input type="radio" id="radio_limbo" name="jogo_fav" value="8">
             <label for="radio_limbo">Limbo</label><br>
-            <input type="radio" id="radio_oribf" name="jogo_fav" value="7">
+            <input type="radio" id="radio_oribf" name="jogo_fav" value="9">
             <label for="radio_oribf">Ori and the Blind Forest</label><br>
-            <input type="radio" id="radio_oriww" name="jogo_fav" value="8">
+            <input type="radio" id="radio_oriww" name="jogo_fav" value="10">
             <label for="radio_oriww">Ori and the Will of the Wisps</label><br>
-            <input type="radio" id="radio_skullgirls" name="jogo_fav" value="2">
+            <input type="radio" id="radio_skullgirls" name="jogo_fav" value="11">
             <label for="radio_skullgirls">Skullgirls</label><br>
-            <input type="radio" id="radio_sv" name="jogo_fav" value="6">
+            <input type="radio" id="radio_sv" name="jogo_fav" value="12">
             <label for="radio_sv">Stardew Valley</label><br>
-            <input type="radio" id="radio_undertale" name="jogo_fav" value="14">
+            <input type="radio" id="radio_undertale" name="jogo_fav" value="13">
             <label for="radio_undertale">Undertale</label><br>
         </form>
             <br>
@@ -389,44 +391,6 @@
 
 </html>
 
-<script src="JS/indieland_mainpage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
-    const labels = [
-      'Binding of Isaac',
-      'Celeste',
-      'Cuphead',
-      'Darkest Dungeon',
-      'Hades',
-      'Hollow Knight',
-      'Inside',
-      'Limbo',
-      'Ori and the Blind Forest',
-      'Ori and the Will of the Wisps',
-      'Skullgirls',
-      'Stardew Valley',
-      'Undertale'
-    ];
-  
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: 'Votos!',
-        backgroundColor: 'blue',
-        borderColor: 'blue',
-        data: [1, 10, 5, 2, 20, 30, 45],
-      }]
-    };
-  
-    const config = {
-      type: 'bar',
-      data: data,
-      options: {}
-    };
-  </script>
-  <script>
-    const myChart = new Chart(
-      document.getElementById('myChartJs'),
-      config
-    );
-  </script>
+    

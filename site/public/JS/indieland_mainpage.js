@@ -9,10 +9,10 @@ const imgs_carrossel = [
     'Images/Imgs-carrossel/stardew-valley-bg.png'
 ]
 
-    var i = 0
- function trocar_carrossel(){
+var i = 0
+function trocar_carrossel() {
     i++
-    if(i > imgs_carrossel.length-1){
+    if (i > imgs_carrossel.length - 1) {
         i = 0
     }
     document.getElementById('carrossel_img').style.backgroundImage = `url(${imgs_carrossel[i]})`
@@ -20,26 +20,30 @@ const imgs_carrossel = [
     carrossel_img.style.transform = `transleteX(${-i * 80}vw)`
 }
 
-function buscar_nome(){
+function buscar_nome() {
     nome_usuario.innerHTML = sessionStorage.nome
 }
 
 setTimeout(trocar_carrossel, 0)
 setInterval(trocar_carrossel, 4500)
 
-function scroll_inicio(){
-    scroll(0,0);
+function scroll_inicio() {
+    scroll(0, 0);
 }
-function scroll_jogos(){
-    scroll(0,1300)
+function scroll_jogos() {
+    scroll(0, 1300)
 }
-function scroll_enquete(){
-    scroll(0,1950)
+function scroll_enquete() {
+    scroll(0, 1950)
 }
-function scroll_comentarios(){
-    scroll(0,2500)
+function scroll_comentarios() {
+    scroll(0, 2500)
 }
-function exibir_sobre_boi(){
+function sair(){
+    sessionStorage.clear()
+    window.location = "index.html"
+}
+function exibir_sobre_boi() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'inline'
     sobre_celeste.style.display = 'none'
@@ -55,7 +59,7 @@ function exibir_sobre_boi(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_celeste(){
+function exibir_sobre_celeste() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'inline'
@@ -71,7 +75,7 @@ function exibir_sobre_celeste(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_cuphead(){
+function exibir_sobre_cuphead() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -87,7 +91,7 @@ function exibir_sobre_cuphead(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_dd(){
+function exibir_sobre_dd() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -103,7 +107,7 @@ function exibir_sobre_dd(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_hades(){
+function exibir_sobre_hades() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -119,7 +123,7 @@ function exibir_sobre_hades(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_hk(){
+function exibir_sobre_hk() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -135,7 +139,7 @@ function exibir_sobre_hk(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_inside(){
+function exibir_sobre_inside() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -151,7 +155,7 @@ function exibir_sobre_inside(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_limbo(){
+function exibir_sobre_limbo() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -167,7 +171,7 @@ function exibir_sobre_limbo(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_oribf(){
+function exibir_sobre_oribf() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -183,7 +187,7 @@ function exibir_sobre_oribf(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_oriww(){
+function exibir_sobre_oriww() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -199,7 +203,7 @@ function exibir_sobre_oriww(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_skullgirls(){
+function exibir_sobre_skullgirls() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -215,7 +219,7 @@ function exibir_sobre_skullgirls(){
     sobre_sv.style.display = 'none'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_sv(){
+function exibir_sobre_sv() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -231,7 +235,7 @@ function exibir_sobre_sv(){
     sobre_sv.style.display = 'inline'
     sobre_undertale.style.display = 'none'
 }
-function exibir_sobre_undertale(){
+function exibir_sobre_undertale() {
     sobre_padrao.style.display = 'none'
     sobre_boi.style.display = 'none'
     sobre_celeste.style.display = 'none'
@@ -248,7 +252,7 @@ function exibir_sobre_undertale(){
     sobre_undertale.style.display = 'inline'
 }
 
-function registrar_voto(){
+function registrar_voto() {
     let fk_jogo = jogo_favorito.elements['jogo_fav'].value
     let usuario_id = sessionStorage.ID_USUARIO
     fetch(`/usuarios/${usuario_id}/votar/${fk_jogo}`, {
@@ -265,118 +269,203 @@ function registrar_voto(){
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-           console.log('Voto registrado com sucesso')
+            console.log('Voto registrado com sucesso')
+            alert('Voto registrado com sucesso')
         } else {
             throw ("Houve um erro ao tentar realizar o voto");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
     });
-
+    setTimeout(recarregar,500)
 }
 
-function obterDadosGrafico(idAquario) {
-    alterarTitulo(idAquario)
+function recarregar(){
+    document.location.reload(true)
+}
+    
 
-    if (proximaAtualizacao != undefined) {
-        clearTimeout(proximaAtualizacao);
-    }
 
-    fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                resposta.reverse();
-
-                plotarGrafico(resposta, idAquario);
+var respSelect;
+var nome1 = ''
+var votos1 = 0
+var nome2 = ''
+var votos2 = 0
+var nome3 = ''
+var votos3 = 0
+var nome4 = ''
+var votos4 = 0
+var nome5 = ''
+var votos5 = 0
+var nome6 = ''
+var votos6 = 0
+var nome7 = ''
+var votos7 = 0
+var nome8 = ''
+var votos8 = 0
+var nome9 = ''
+var votos9 = 0
+var nome10 = ''
+var votos10 = 0
+var nome11 = ''
+var votos11 = 0
+var nome12 = ''
+var votos12 = 0
+var nome13 = ''
+var votos13 = 0
+function pegarVoto() {
+    //aguardar();
+    fetch("/usuarios/pegarVoto").then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+                nome1 = resposta[0].nome
+                votos1 = resposta[0].QuantVotos
+                if(resposta[1]){
+                nome2 = resposta[1].nome
+                votos2 = resposta[1].QuantVotos
+                }
+                if(resposta[2]){
+                    nome3 = resposta[2].nome
+                    votos3 = resposta[2].QuantVotos
+                }
+                if(resposta[3]){
+                    nome4 = resposta[3].nome
+                    votos4 = resposta[3].QuantVotos
+                }
+                if(resposta[4]){
+                    nome5 = resposta[4].nome
+                    votos5 = resposta[4].QuantVotos
+                }
+                if(resposta[5]){
+                    nome6 = resposta[5].nome
+                    votos6 = resposta[5].QuantVotos
+                }
+                if(resposta[6]){
+                    nome7 = resposta[6].nome
+                    votos7 = resposta[6].QuantVotos
+                }
+                if(resposta[7]){
+                    nome8 = resposta[7].nome
+                    votos8 = resposta[7].QuantVotos
+                }
+                if(resposta[8]){
+                    nome9 = resposta[8].nome
+                    votos9 = resposta[8].QuantVotos
+                }
+                if(resposta[9]){
+                    nome10 = resposta[9].nome
+                    votos10 = resposta[9].QuantVotos
+                }
+                if(resposta[10]){
+                    nome11 = resposta[10].nome
+                    votos11 = resposta[10].QuantVotos
+                }
+                if(resposta[11]){
+                    nome12 = resposta[11].nome
+                    votos12 = resposta[11].QuantVotos
+                }
+                if(resposta[12]){
+                    nome13 = resposta[12].nome
+                    votos13 = resposta[12].QuantVotos
+                }
+                if(resposta[13]){
+                    nome3 = resposta[13].nome
+                    votos3 = resposta[13].QuantVotos
+                }
+                graficar()
             });
         } else {
-            console.error('Nenhum dado encontrado ou erro na API');
+            throw ('Houve um erro na API!');
         }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-}
-
-// Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-// Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-// A função *plotarGrafico* também invoca a função *atualizarGrafico*
-function plotarGrafico(resposta) {
-    console.log('iniciando plotagem do gráfico...');
-
-    var dados = {
-        labels: [],
-        datasets: [
-            {
-                yAxisID: 'y-Votos',
-                label: 'Jogos mais votados',
-                borderColor: '#32B9CD',
-                backgroundColor: '#32b9cd8f',
-                fill: true,
-                data: []
-            },
-/*             {
-                yAxisID: 'y-temperatura',
-                label: 'Temperatura',
-                borderColor: '#FFF',
-                backgroundColor: '#32b9cd8f',
-                fill: true,
-                data: []
-            } */
-        ]
-    };
-
-    for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
-        dados.labels.push(registro.momento_grafico);
-        dados.datasets[0].data.push(registro.umidade);
-        dados.datasets[1].data.push(registro.temperatura);
-    }
-
-    console.log(JSON.stringify(dados));
-
-    var ctx = myChartJs.getContext('2d');
-    window.grafico_linha = Chart.Line(ctx, {
-        data: dados,
-        options: {
-            responsive: true,
-            animation: { duration: 500 },
-            hoverMode: 'index',
-            stacked: false,
-            title: {
-                display: false,
-                text: 'Votos'
-            },
-            scales: {
-                yAxes: [{
-                    type: 'bar',
-                    display: true,
-                    position: 'left',
-                    id: 'y-temperatura',
-                    ticks: {
-                        beginAtZero: true,
-                        max: 100,
-                        min: 0
-                    }
-                }, {
-                    type: 'bar',
-                    display: false,
-                    position: 'right',
-                    id: 'y-umidade',
-                    ticks: {
-                        beginAtZero: true,
-                        max: 100,
-                        min: 0
-                    },
-
-                    gridLines: {
-                        drawOnChartArea: false,
-                    },
-                }],
-            }
-        }
+    }).catch(function (resposta) {
+        console.error(resposta);
     });
-
-    setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
 }
+
+pegarVoto()
+
+function graficar(){
+    const labels = []
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Votos',
+            backgroundColor: ['#9E7F01', '#A82B08', '#610091', '#0867A8', '#089E19'],
+            borderColor: '#e30ed8',
+            data: [],
+        },
+      /*   {
+            label: 'Boi',
+            backgroundColor: 'red',
+            borderColor: 'red',
+            data: [],
+        }, */
+    ]
+    };
+    
+    
+    
+    labels.push(nome1)
+    data.datasets[0].data.push(votos1)
+    if(votos2 > 0){
+        labels.push(nome2)
+        data.datasets[0].data.push(votos2)
+    }
+    if(votos3 > 0){
+        labels.push(nome3)
+        data.datasets[0].data.push(votos3)
+    }
+    if(votos4 > 0){
+        labels.push(nome4)
+        data.datasets[0].data.push(votos4)
+    }
+    if(votos5 > 0){
+        labels.push(nome5)
+        data.datasets[0].data.push(votos5)
+    }
+    if(votos6 > 0){
+        labels.push(nome6)
+        data.datasets[0].data.push(votos6)
+    }
+    if(votos7 > 0){
+        labels.push(nome7)
+        data.datasets[0].data.push(votos7)
+   }
+    if(votos8 > 0){
+        labels.push(nome8)
+        data.datasets[0].data.push(votos8)
+    }
+    if(votos9 > 0){
+        labels.push(nome9)
+        data.datasets[0].data.push(votos9)
+    }
+    if(votos10 > 0){
+        labels.push(nome10)
+        data.datasets[0].data.push(votos10)
+    }
+    if(votos11 > 0){
+        labels.push(nome11)
+        data.datasets[0].data.push(votos11)
+    }
+    if(votos12 > 0){
+        labels.push(nome12)
+        data.datasets[0].data.push(votos12)
+    }
+    if(votos13 > 0){
+        labels.push(nome13)
+        data.datasets[0].data.push(votos13)
+    }
+    
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+    };
+    
+    const myChart = new Chart(
+        document.getElementById('myChartJs'),
+        config)
+}
+
+

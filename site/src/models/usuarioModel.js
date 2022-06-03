@@ -38,9 +38,22 @@ function votar(usuario_id, jogos_id){
     return database.executar(instrucao);
 }
 
+function pegarVoto() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ")
+    var instrucao = `
+    select jogos.nome, count(usuario.fk_jogos) as 'QuantVotos' from usuario join jogos
+    on usuario.fk_jogos = jogos.id 
+    group by jogos.id order by jogos.nome;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     votar,
+    pegarVoto
 };
