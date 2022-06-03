@@ -119,9 +119,7 @@ function cadastrar() {
     var confirmacaoSenhaVar = confirm_password.value;
 
     if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+        alert('Campo em branco, cheque novamente')
         return false;
     }
 

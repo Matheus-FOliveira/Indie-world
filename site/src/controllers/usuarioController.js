@@ -97,10 +97,42 @@ function cadastrar(req, res) {
             );
     }
 }
+function votar(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var usuario_id = req.params.usuario_id;
+    var jogos_id = req.params.jogos_id;
+
+    console.log('Entrei aqui');
+
+    // Faça as validações dos valores
+    if (usuario_id == undefined) {
+        res.status(400).send("Seu ID está undefined!");
+    }
+     else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.votar(usuario_id, jogos_id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o voto! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    votar
 }

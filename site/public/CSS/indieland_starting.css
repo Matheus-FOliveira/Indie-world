@@ -169,36 +169,36 @@ body{
 #input_nome:hover~#mensagem_erro_nome{
     opacity: 1;
 }
-#mensagem_erro_nome{
+/* #mensagem_erro_nome{
     top:200px;
-}
+} */
 
 #input_username:hover~#mensagem_erro_username{
     opacity: 1;
 }
-#mensagem_erro_username{
+/* #mensagem_erro_username{
     top:270px;
-}
+} */
 #input_password:hover~#mensagem_erro_password{
     opacity: 1;
 }
-#mensagem_erro_password{
+/* #mensagem_erro_password{
     top: 340px;
-}
+} */
 #confirm_password:hover~#mensagem_erro_password_confirm{
     opacity: 1;
 }
 
-#mensagem_erro_password_confirm{
+/* #mensagem_erro_password_confirm{
     top: 200px
-}
+} */
 
 #input_email:hover~#mensagem_erro_email{
     opacity: 1;
 }
 
-#mensagem_erro_email{
+/* #mensagem_erro_email{
     top:270px;
-}
+} */
 
 

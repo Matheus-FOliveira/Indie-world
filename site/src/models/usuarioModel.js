@@ -31,8 +31,16 @@ function cadastrar(nome, email, senha, username) {
     return database.executar(instrucao);
 }
 
+function votar(usuario_id, jogos_id){
+    var instrucao = `
+    UPDATE usuario SET fk_jogos= ${jogos_id} WHERE id = ${usuario_id};
+    `;
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    votar,
 };

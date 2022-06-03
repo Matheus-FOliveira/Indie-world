@@ -249,5 +249,134 @@ function exibir_sobre_undertale(){
 }
 
 function registrar_voto(){
-    alert('Seu voto foi registrado! Fique a vontade pra trocar!')
+    let fk_jogo = jogo_favorito.elements['jogo_fav'].value
+    let usuario_id = sessionStorage.ID_USUARIO
+    fetch(`/usuarios/${usuario_id}/votar/${fk_jogo}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+           console.log('Voto registrado com sucesso')
+        } else {
+            throw ("Houve um erro ao tentar realizar o voto");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+}
+
+function obterDadosGrafico(idAquario) {
+    alterarTitulo(idAquario)
+
+    if (proximaAtualizacao != undefined) {
+        clearTimeout(proximaAtualizacao);
+    }
+
+    fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+
+                plotarGrafico(resposta, idAquario);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+}
+
+// Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+// Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+// A função *plotarGrafico* também invoca a função *atualizarGrafico*
+function plotarGrafico(resposta) {
+    console.log('iniciando plotagem do gráfico...');
+
+    var dados = {
+        labels: [],
+        datasets: [
+            {
+                yAxisID: 'y-Votos',
+                label: 'Jogos mais votados',
+                borderColor: '#32B9CD',
+                backgroundColor: '#32b9cd8f',
+                fill: true,
+                data: []
+            },
+/*             {
+                yAxisID: 'y-temperatura',
+                label: 'Temperatura',
+                borderColor: '#FFF',
+                backgroundColor: '#32b9cd8f',
+                fill: true,
+                data: []
+            } */
+        ]
+    };
+
+    for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        dados.labels.push(registro.momento_grafico);
+        dados.datasets[0].data.push(registro.umidade);
+        dados.datasets[1].data.push(registro.temperatura);
+    }
+
+    console.log(JSON.stringify(dados));
+
+    var ctx = myChartJs.getContext('2d');
+    window.grafico_linha = Chart.Line(ctx, {
+        data: dados,
+        options: {
+            responsive: true,
+            animation: { duration: 500 },
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+                display: false,
+                text: 'Votos'
+            },
+            scales: {
+                yAxes: [{
+                    type: 'bar',
+                    display: true,
+                    position: 'left',
+                    id: 'y-temperatura',
+                    ticks: {
+                        beginAtZero: true,
+                        max: 100,
+                        min: 0
+                    }
+                }, {
+                    type: 'bar',
+                    display: false,
+                    position: 'right',
+                    id: 'y-umidade',
+                    ticks: {
+                        beginAtZero: true,
+                        max: 100,
+                        min: 0
+                    },
+
+                    gridLines: {
+                        drawOnChartArea: false,
+                    },
+                }],
+            }
+        }
+    });
+
+    setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
 }
