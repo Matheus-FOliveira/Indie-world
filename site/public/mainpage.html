@@ -12,17 +12,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato&family=Poppins:wght@100&family=Quicksand&family=Roboto+Mono:wght@400;500&family=Source+Code+Pro:wght@200;300&family=Tiro+Kannada&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" href="/Images/icon-controler.png">
     <link rel="stylesheet" href="CSS/indieland_main.css">
     <script src="JS/indieland_mainpage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Indieland</title>
 </head>
 
-<body>
+<body onload="checklogin()">
     <div id="header" onload="greetings()">
         <span id="titulo"><img src="Images/Img_titulo_indieland.png" alt="Indieland" class="img_titulo"></span>
-        <span class="hello_header">Olá, <span onload="buscar_nome()" id="nome_usuario">Usuário</span></span>
+        <span id="hello_header">
+            Olá, <span onload="buscar_nome()" id="nome_usuario">Usuário</span>
+        </span>
         <div class="lista_header">
             <ul>
                 <a class="clickable" id="botao_inicio" onclick="scroll_inicio()">Início</a>
