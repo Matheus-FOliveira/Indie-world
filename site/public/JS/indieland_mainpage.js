@@ -23,14 +23,15 @@ function trocar_carrossel() {
 }
 
 function buscar_nome() {
-  nome_usuario.innerHTML = sessionStorage.nome;
+  nome_usuario.innerHTML = sessionStorage.USERNAME_USUARIO;
 }
 function checklogin() {
-  id_usuario = sessionStorage.id_usuario;
+  id_usuario = sessionStorage.ID_USUARIO;
   if (id_usuario == null) {
     document.getElementById("botao_sair").innerHTML = "Login/Cadastro";
     document.getElementById("hello_header").innerHTML = "";
   }
+  buscar_nome()
 }
 
 setTimeout(trocar_carrossel, 0);
@@ -46,7 +47,7 @@ function scroll_enquete() {
   scroll(0, 1950);
 }
 function scroll_comentarios() {
-  scroll(0, 2500);
+  scroll(0, 2600);
 }
 function sair() {
   sessionStorage.clear();

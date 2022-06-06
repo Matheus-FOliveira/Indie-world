@@ -53,7 +53,12 @@ Primary key(id)
  (null, 'Miranha', 'spetacular@spiderman', 'Spider-man', 'Pspsps!!', 4),
  (null, 'Matheus', 'matheus@sptech.school', 'Supimpa', '12345@#', 4),
  (null, 'Lucas', 'lucas@sptech.school', 'ElLuquita', '77777%', 1),
- (null, 'Peter', 'peter@sptech.school', 'Peter', '731985@', 1);
+ (null, 'Peter', 'peter@sptech.school', 'Peter', '731985@', 1),
+ (null, 'João', 'joaojoao@gmail.com', 'Jao', '000000000###', 13),
+ (null, 'Isaac', 'thebinding@of.isaac', 'The Lost', '454856784@#', 1),
+ (null, 'Caio', 'caio@sptech.school', 'GamerMan', 'caio1!', 2),
+ (null, 'Paternezi', 'williampaternezi@sptech.school', 'Paternaz', 'segredo!!!', 11),
+ (null, 'Gabriel', 'gabrimaximiano@sptech.school', 'Maximo', 'valval#@', 6);
  
  select * from usuario order by id;
  select * from jogos;
